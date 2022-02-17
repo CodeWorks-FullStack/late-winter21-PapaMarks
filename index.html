@@ -27,8 +27,7 @@
       <div class="row">
         <div class="col-12">
           <!-- SECTION PIZZA FORM -->
-          <!-- TODO onsubmit..... -->
-          <form>
+          <form onsubmit="app.pizzasController.createPizza()">
             <div class="m-3">
               <div class="d-flex align-items-end">
                 <input type="text" name="name" id="name" class="form-control mx-2" placeholder="Name...">
@@ -44,7 +43,7 @@
                   <option>Medium</option>
                   <option>Kid</option>
                 </select>
-                <button class="btn btn-outline-success ms-2">Add</button>
+                <button class="btn btn-success ms-2">Add</button>
               </div>
             </div>
           </form>
@@ -56,7 +55,7 @@
         <div class="col-md-4 p-3">
           <div class="rounded shadow bg-white">
             <div class="rounded-top bg-secondary text-center p-2">
-              <h4>PIZZA TITLE</h4>
+              <h4>PIZZA TITLE </h4>
             </div>
             <div class="p-3">
               <div class="bg-secondary lighten-30 p-2 rounded">
