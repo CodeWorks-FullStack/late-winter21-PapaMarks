@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Papa Mark's 🍕</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand bg-danger darken-20 text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <span class="ms-2">Papa Mark's Pizzaria</span>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- SECTION PIZZA FORM -->
+          <!-- TODO onsubmit..... -->
+          <form>
+            <div class="m-3">
+              <div class="d-flex align-items-end">
+                <input type="text" name="name" id="name" class="form-control mx-2" placeholder="Name...">
+                <select class="form-control mx-2" name="sauce" id="sauce">
+                  <option disabled selected>Choose your sauce</option>
+                  <option>Red</option>
+                  <option>White</option>
+                  <option>BBQ</option>
+                </select>
+                <select class="form-control mx-2" name="size" id="size">
+                  <option disabled selected>Choose your size</option>
+                  <option>MEGA</option>
+                  <option>Medium</option>
+                  <option>Kid</option>
+                </select>
+                <button class="btn btn-outline-success ms-2">Add</button>
+              </div>
+            </div>
+          </form>
+          <!-- END SECTION -->
+        </div>
+      </div>
+      <div class="row" id="pizzas">
+        <!-- STUB PIZZA TEMPLATE -->
+        <div class="col-md-4 p-3">
+          <div class="rounded shadow bg-white">
+            <div class="rounded-top bg-secondary text-center p-2">
+              <h4>PIZZA TITLE</h4>
+            </div>
+            <div class="p-3">
+              <div class="bg-secondary lighten-30 p-2 rounded">
+                <p><b>Pizza Options</b></p>
+                <ul>
+                  <li>Sauce: TYPE</li>
+                  <li>Size: SIZE</li>
+                </ul>
+              </div>
+              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+                <p><b>Toppings</b></p>
+                <ul>
+                  <li>Pepperoni </li>
+                  <li>Olive</li>
+                </ul>
+              </div>
+            </div>
+            <!-- TOPPING FORM  -->
+            <!-- TODO make onsubmit -->
+            <form class="px-3 pb-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Topping..." aria-label="topping"
+                  aria-describedby="topping">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                    class="mdi mdi-plus"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- ---------------------- END TEMPLATE -->
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p><small>Made with 💖 by Codeworks</small></p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
