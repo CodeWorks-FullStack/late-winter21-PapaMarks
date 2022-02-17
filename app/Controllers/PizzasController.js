@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { pizzasService } from "../Services/PizzasService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 function _drawPizza() {
   let template = ''
@@ -11,8 +12,12 @@ function _drawPizza() {
 export class PizzasController {
   constructor() {
     ProxyState.on('pizzas', _drawPizza)
-    // draws the fake data
-    _drawPizza()
+    ProxyState.on('toppings', _drawPizza)
+    ProxyState.on('pizzas', saveState)
+    ProxyState.on('toppings', saveState)
+
+
+    loadState()
   }
 
   createPizza() {

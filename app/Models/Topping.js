@@ -8,7 +8,7 @@ export class Topping {
   }
 
   get Template() {
-    return `<li>${this.name}</li>`
+    return `<li class="d-flex justify-content-between">${this.name} <i class="mdi mdi-delete selectable" title="Delete ${this.name}" onclick="app.toppingsController.deleteTopping('${this.id}')"></i></li>`
   }
 
 }
