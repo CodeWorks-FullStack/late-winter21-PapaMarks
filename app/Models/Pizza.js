@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
 
 export class Pizza {
@@ -30,8 +31,7 @@ export class Pizza {
         <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
           <p><b>Toppings</b></p>
           <ul>
-            <li>Pepperoni </li>
-            <li>Olive</li>
+             ${this.Toppings}
           </ul>
         </div>
       </div>
@@ -49,5 +49,12 @@ export class Pizza {
   </div>
     
     `
+  }
+
+  get Toppings() {
+    let template = ''
+    const myToppings = ProxyState.toppings.filter(t => t.pizzaId == this.id)
+    myToppings.forEach(t => template += t.Template)
+    return template
   }
 }
